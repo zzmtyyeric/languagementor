@@ -9,14 +9,14 @@ from langchain_core.runnables.history import RunnableWithMessageHistory  # 导�
 from .session_history import get_session_history  # 导入会话历史相关方法
 from utils.logger import LOG  # 导入日志工具
 
-class ConversationAgent:
+class ConversationZZM:
     """
     对话代理类，负责处理与用户的对话。
     """
     def __init__(self, session_id=None):
         self.name = "conversation"  # 设置代理名称为 "conversation"
         self.session_id = session_id if session_id else self.name  # 如果未提供会话ID，则使用代理名称作为会话ID
-        self.prompt_file = "prompts/conversation_prompt.txt"  # 系统提示语文件路径
+        self.prompt_file = "prompts/conversation_zzm.txt"  # 系统提示语文件路径
         self.prompt = self.load_prompt()  # 加载系统提示语
 
         self.create_chatbot()  # 创建聊天机器人
